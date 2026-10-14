@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body { background-color: darkviolet; font-family: Arial, sans-serif; }
+    h1 { text-align: center; color: white; }
+    .calculator {
+      width: 260px; margin: 40px auto; padding: 20px;
+      background: #000000; border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .display {
+      width: 100%; height: 50px; margin-bottom: 15px;
+      text-align: right; padding: 5px; font-size: 20px;
+      border: none; border-radius: 5px; background: #ffffff;
+    }
+    .buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    button {
+      padding: 15px; font-size: 18px; border: none; border-radius: 5px;
+      background: #6a0dad; color: white; cursor: pointer; transition: 0.2s;
+    }
+    button:hover { background: #8a2be2; }
+  </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <div class="calculator">
+    <input type="text" class="display" id="display" disabled>
+    <div class="buttons">
+      <button onclick="displayNumber('7')">7</button>
+      <button onclick="displayNumber('8')">8</button>
+      <button onclick="displayNumber('9')">9</button>
+      <button onclick="displayNumber('/')">÷</button>
+
+      <button onclick="displayNumber('4')">4</button>
+      <button onclick="displayNumber('5')">5</button>
+      <button onclick="displayNumber('6')">6</button>
+      <button onclick="displayNumber('*')">*</button>
+
+      <button onclick="displayNumber('1')">1</button>
+      <button onclick="displayNumber('2')">2</button>
+      <button onclick="displayNumber('3')">3</button>
+      <button onclick="displayNumber('-')">-</button>
+
+      <button onclick="displayNumber('0')">0</button>
+      <button onclick="displayNumber('.')">.</button>
+      <button onclick="evaluateExp()">=</button>
+      <button onclick="displayNumber('+')">+</button>
+      <button onclick="clearBox()" style="grid-column: span 4; ">AC</button>
+    </div>
+  </div>
+
+  <!-- Link external JS -->
+  <script src="./script.js"></script>
+</body>
+</html>
